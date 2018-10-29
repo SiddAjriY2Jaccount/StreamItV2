@@ -8,17 +8,21 @@
 
     <!--<h4>Hits : {{song_play.songhits}}</h4>-->
 
-
-    <video width='900' controls>
-     <source src="{{MEDIA_URL}}{{video.videofile}}" type="video/mp4">
-     Your browser does not support the audio element.
-   </video>
+<br>
+<br>
 
 
-   <h1>{{video.videotitle}}</h1>
 
-   <h3>Release Date : {{video.releasedate}}</h3>
+   <h1 class="headingvu">{{video.videotitle}}</h1>
 
+   <h3 class="headingvu">Release Date : {{video.releasedate}}</h3>
+
+   <video width='1333' controls>
+    <source src="{{MEDIA_URL}}{{video.videofile}}" type="video/mp4">
+    Your browser does not support the audio element.
+  </video>
+<br>
+<br>
    <a class="btn btn-default" href="{% url 'music:add_comment_to_post_video' videoid=video.videoid %}"> Add comment </a>
 
    <hr>
@@ -31,7 +35,7 @@
        </div>
 
    {% empty %}
-       <p>No comments here yet :(</p>
+       <p class="nocomment">No comments here yet :(</p>
 
    {% endfor %}
 

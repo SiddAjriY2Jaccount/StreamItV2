@@ -2,23 +2,31 @@
 {% block title %}Songs{% endblock %}
 
 {% block body %}
-
-    <img src="{{song.albumlogo.url}}"><!-- .url will give the url to the image in _profile_pics_ -->
-
-    <h1> {{song.songtitle}} </h1>
-    <h2> Artist : {{song.artist}} </h2>
-    <h3> Album : {{song.albumtitle}} </h3>
-    <h3> Genre : {{song.genre}} </h3>
+<br>
+<br>
+<body class="headingborder">
 
 
+    <img src="{{song.albumlogo.url}}" align="middle"><!-- .url will give the url to the image in _profile_pics_ -->
+
+    <h1 class="headingvui"> <mark> {{song.songtitle}} </mark></h1>
+    <h2 class="headingvui"> <mark> Artist : {{song.artist}} </mark></h2>
+    <h3 class="headingvui"> <mark> Album : {{song.albumtitle}} </mark></h3>
+    <h3 class="headingvui"> <mark> Genre : {{song.genre}} </mark></h3>
+
+</body>
     <!--<h4>Hits : {{song_play.songhits}}</h4>-->
+<br>
 
-    <audio controls id="myAudio">
+
+    <audio align="middle" controls id="myAudio" class="headingvu">
       <source src="{{MEDIA_URL}}{{song.audiofile}}" type="audio/mp3">
 
 
         Your browser does not support the audio element.
     </audio>
+
+    <br>
     <br>
     <a class="btn btn-default" href="{% url 'music:add_comment_to_post' songid=song.songid %}"> Add Comment </a>
 
@@ -30,10 +38,11 @@
             <strong>{{ comment.author }}</strong>
 
             <p>{{ comment.text|linebreaks }}</p>
+            <br>
         </div>
 
     {% empty %}
-        <p> No comments here yet. Be the first. </p>
+        <p class="nocomment"> No comments here yet. Be the first. </p>
 
     {% endfor %}
 

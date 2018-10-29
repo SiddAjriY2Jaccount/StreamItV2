@@ -1,6 +1,8 @@
 {% extends "music/base.html" %}
 {% block content %}
 {% load crispy_forms_tags  %}
+<br>
+<br>
   <div class="content-section">
 
   <form  method="POST">
@@ -17,7 +19,7 @@
   </form>
 <div class="border-top pt-3">
   <small class="text-muted">
-    Need an Account?<a href={% url 'register' %} class = "ml-2">Sign Up</a>
+    Need an Account? <a href={% url 'register' %} class = "ml-2">Sign Up</a>
   </small>
 
 </div>

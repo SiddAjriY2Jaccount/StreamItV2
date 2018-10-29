@@ -6,7 +6,7 @@ body{
 .heading{
     color: red;
     font-family:'Georgia', serif;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 200%;
 }
 
@@ -26,8 +26,40 @@ body{
 
 .comment{
     margin: 10px 10px 10px 10px;
+    color: blue;
+}
+
+.nocomment{
+  color: blue;
 }
 
 .color-me{
   color: red;
+}
+
+.headingvu{
+  color: red;
+  font-family:'Georgia', serif;
+  font-weight: bold;
+  border: 10px;
+  text-align: center;
+
+}
+
+.headingvui{
+  color: red;
+  font-family:'Georgia', serif;
+  font-weight: bold;
+
+
+
+}
+
+.headingborder{
+  
+}
+
+mark{
+  color: red;
+  background-color: black;
 }
