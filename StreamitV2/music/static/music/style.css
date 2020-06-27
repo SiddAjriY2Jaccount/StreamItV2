@@ -56,10 +56,46 @@ body{
 }
 
 .headingborder{
-  
+
 }
 
 mark{
   color: red;
   background-color: black;
+}
+
+
+.thumbnail {
+  border: 1px solid #ccc;
+  padding-right: 10px;
+  /*display: block;*/
+  width: 100%;
+  height: 365px;
+  margin-right: 12px;
+  padding-bottom: 1px;
+  text-align: center;
+  vertical-align: bottom;
+  /*margin-bottom: 26px;*/
+}
+
+.caption-title {
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 50px;
+  /*padding-bottom: px;*/
+}
+
+.caption-artist{
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.details-button {
+  padding-top: 2px;
+  vertical-align: bottom;
+}
+
+.video-details-btn {
+  padding-top: 40px;
 }

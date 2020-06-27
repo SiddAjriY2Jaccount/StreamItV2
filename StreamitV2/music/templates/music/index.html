@@ -13,16 +13,17 @@
               <a href="{% url 'music:detail' song.songid %}">
                   <img src="{{ song.albumlogo.url}}" class="img-responsive">
               </a>
-              <div class="caption">
-                  <h2>{{ song.songtitle }}</h2>
-                  <h4>{{ song.artist }}</h4>
-
-                  <!-- View Details -->
-                  <a href="{% url 'music:detail' song.songid %}" class="btn btn-primary btn-sm" role="button"> View Details </a>
-
-
-
+              <div class="caption-title">
+                  <h3>{{ song.songtitle }}</h3>
               </div>
+              <div class="caption-artist">
+                  <h4>{{ song.artist }}</h4>
+              </div>
+              <div class="details-button">
+                <!-- View Details -->
+                <a href="{% url 'music:detail' song.songid %}" class="btn btn-primary btn-sm" role="button"> View Details </a>
+              </div>
+
           </div>
       </div>
       {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
@@ -47,11 +48,14 @@
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFl78Bpyt5pQb0D06tqzH3MmHSxWOUFmAyBNqIDxYU37EBqhB91g" class="img-responsive">
               </a>
               <div class="caption">
-                  <h2>{{ video.videotitle }}</h2>
+                  <h3>{{ video.videotitle }}</h3>
                   <h4>{{ video.releasedate }}</h4>
 
-                  <!-- View Details -->
-                  <a href="{% url 'music:videodetail' video.videoid %}" class="btn btn-primary btn-sm" role="button"> View Details </a>
+                  <div class="video-details-btn">
+                                      <!-- View Details -->
+                      <a href="{% url 'music:videodetail' video.videoid %}" class="btn btn-primary btn-sm" role="button"> View Details </a>
+
+                  </div>
 
 
 
