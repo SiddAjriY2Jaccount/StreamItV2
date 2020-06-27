@@ -4,9 +4,10 @@
 
 
 {% if all_songs %}
-<h3 class="heading"> OUR COLLECTION: SONGS AND VIDEOS AVAILABLE TO STREAM CURRENTLY </h3>
+<center><h3 class="heading"> OUR COLLECTION: SONGS AND VIDEOS AVAILABLE TO STREAM CURRENTLY </h3></center>
 <br>
-</br>
+<hr>
+<br>
   {% for song in all_songs %}
       <div class="col-sm-4 col-lg-2">
           <div class="thumbnail">
@@ -47,19 +48,19 @@
               <a href="{% url 'music:videodetail' video.videoid %}">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFl78Bpyt5pQb0D06tqzH3MmHSxWOUFmAyBNqIDxYU37EBqhB91g" class="img-responsive">
               </a>
-              <div class="caption">
+              <div class="vid-caption-title">
                   <h3>{{ video.videotitle }}</h3>
-                  <h4>{{ video.releasedate }}</h4>
+              </div>
+              <div class="vid-caption-date">
+                <h4>{{ video.releasedate }}</h4>
+              </div>
 
-                  <div class="video-details-btn">
-                                      <!-- View Details -->
-                      <a href="{% url 'music:videodetail' video.videoid %}" class="btn btn-primary btn-sm" role="button"> View Details </a>
-
-                  </div>
-
-
+              <div class="video-details-btn">
+                                  <!-- View Details -->
+                  <a href="{% url 'music:videodetail' video.videoid %}" class="btn btn-primary btn-sm" role="button"> View Details </a>
 
               </div>
+
           </div>
       </div>
       {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
