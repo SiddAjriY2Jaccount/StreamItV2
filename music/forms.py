@@ -9,7 +9,7 @@ class UserRegisterForm(UserCreationForm):
 
 
 
-    class Meta: # this class gives us nested namespace for configuarations and keeps the configuartions at one place....forms.save will save in thb euser model
+    class Meta: # this class gives us nested namespace for configurations and keeps the configurations at one place....forms.save will save in the user model
          model = User
          fields = ('username','email','password1',)
 
